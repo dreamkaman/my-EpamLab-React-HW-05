@@ -1,20 +1,68 @@
+// {
+//   "include": [
+//     "src",
+//     "./declarations.d.ts"
+//   ],
+//   "exclude": [
+//     "node_modules"
+//   ],
+//   "compilerOptions": {
+//     "plugins": [
+//       {
+//         "name": "typescript-plugin-css-modules"
+//       }
+//     ],
+//     "jsx": "react-jsx",
+//     "allowJs": true,
+//     "target": "ES5",
+//     "removeComments": true,
+//     "baseUrl": "src",
+//     "module": "commonjs",
+//     "strict": false,
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "noImplicitAny": false,
+//     "forceConsistentCasingInFileNames": true
+//   },
+//   "$schema": "https://json.schemastore.org/tsconfig",
+//   "display": "Recommended"
+// }
+
 {
-  "include": ["src", "./declarations.d.ts"],
-  "exclude": ["node_modules"],
+    "include": [
+    "src",
+    "./declarations.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
   "compilerOptions": {
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "target": "ES5",
-    "removeComments": true,
     "baseUrl": "src",
-    "module": "commonjs",
-    "strict": false,
-    "esModuleInterop": true,
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
     "skipLibCheck": true,
-    "noImplicitAny": false,
-    "forceConsistentCasingInFileNames": true
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "experimentalDecorators": true,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Recommended"
 }

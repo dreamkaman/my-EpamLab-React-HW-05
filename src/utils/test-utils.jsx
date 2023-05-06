@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import { render as rtlRender } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 export const mockedState = {
 	user: {
@@ -34,8 +34,8 @@ export const mockedStore = {
 	dispatch: jest.fn(),
 };
 
-export const render = (component) =>
-	rtlRender(
+export const renderWithProvider = (component) =>
+	render(
 		<Provider store={mockedStore}>
 			<BrowserRouter>{component}</BrowserRouter>
 		</Provider>
