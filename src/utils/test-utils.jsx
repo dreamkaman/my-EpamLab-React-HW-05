@@ -13,9 +13,9 @@ export const mockedState = {
 	courses: [
 		{
 			id: '83e563a1-a9f3-4f56-877f-ae22a66ee8c9',
-			title: 'Testing',
-			description: 'Testing test',
-			creationDate: '8/3/2021',
+			title: 'TestingTitle',
+			description: 'TestingDescription',
+			creationDate: '08/03/2021',
 			duration: 180,
 			authors: ['24699fc6-c7a3-4b53-994f-f30e5c444134'],
 		},
