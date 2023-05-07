@@ -16,7 +16,7 @@ describe('Tests for CourseCard', () => {
 		);
 		expect(screen.getByText('TestingTitle')).toBeInTheDocument();
 	});
-	it(' CourseCard should display description.	', () => {
+	it('CourseCard should display description.', () => {
 		renderWithProvider(
 			<CourseCard
 				id={mockedState.courses[0].id}
