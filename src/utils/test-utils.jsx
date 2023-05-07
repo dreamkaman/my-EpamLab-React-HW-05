@@ -8,7 +8,7 @@ export const mockedState = {
 		name: 'TestUser',
 		email: 'test@test.com',
 		token: 'testToken',
-		role: 'user',
+		role: 'admin',
 	},
 	courses: [
 		{
