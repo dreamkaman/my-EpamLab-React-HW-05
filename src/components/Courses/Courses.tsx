@@ -62,22 +62,25 @@ const Courses = () => {
 				)}
 			</div>
 
-			<ul>
-				{filteredCourses?.map((course) => {
-					return (
-						<CourseCard
-							id={course.id}
-							key={course.id}
-							title={course.title}
-							description={course.description}
-							authors={convertAuthorsIdToNames(course.authors, authors)}
-							duration={course.duration}
-							creationDate={dateTransform(course.creationDate)}
-						/>
-					);
-				})}
-			</ul>
-			{/* )} */}
+			{filteredCourses.length ? (
+				<ul>
+					{filteredCourses.map((course) => {
+						return (
+							<CourseCard
+								id={course.id}
+								key={course.id}
+								title={course.title}
+								description={course.description}
+								authors={convertAuthorsIdToNames(course.authors, authors)}
+								duration={course.duration}
+								creationDate={dateTransform(course.creationDate)}
+							/>
+						);
+					})}
+				</ul>
+			) : (
+				<p>There are no courses yet</p>
+			)}
 		</section>
 	);
 };
