@@ -9,9 +9,8 @@ import SelectedAuthorsList from './components/SelectedAuthorsList';
 import { durationTransform } from 'helpers/pipeDuration';
 import { IAuthor, getAuthorsIdArray } from 'helpers/authorsString';
 
-import { useAppSelector } from 'redux/hooks';
+import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import { getAllAuthorsSelector } from 'redux/store/authors/selectors';
-import { useAppDispatch } from 'redux/store';
 
 import { addNewAuthorAction } from 'redux/store/authors/actionCreators';
 

@@ -1,5 +1,4 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import { useDispatch } from 'react-redux';
 
 import createSagaMiddleware from '@redux-saga/core';
 
@@ -30,4 +29,4 @@ export type RootState = ReturnType<typeof store.getState>;
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;
 
-export const useAppDispatch: () => AppDispatch = useDispatch;
+// export const useAppDispatch: () => AppDispatch = useDispatch;

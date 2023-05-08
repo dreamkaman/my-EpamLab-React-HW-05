@@ -5,7 +5,7 @@ import Button from 'common/Button';
 
 import { ICourseCardProps } from 'tsTypes';
 import { durationTransform } from 'helpers/pipeDuration';
-import { useAppDispatch } from 'redux/store';
+import { useAppDispatch } from 'redux/hooks';
 import { deleteCourseAction } from 'redux/store/courses/actionCreators';
 
 import s from './CourseCard.module.css';

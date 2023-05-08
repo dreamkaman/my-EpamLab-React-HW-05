@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAppDispatch } from 'redux/store';
-import { useAppSelector } from 'redux/hooks';
+
+import { useAppSelector, useAppDispatch } from 'redux/hooks';
 
 import Input from 'common/Input';
 import Button from 'common/Button';

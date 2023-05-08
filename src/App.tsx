@@ -9,14 +9,14 @@ import CourseForm from 'components/CourseForm';
 import ProtectedRoute from 'common/ProtectedRoute';
 import PrivateRoute from 'components/PrivateRouter';
 
-import { useAppSelector } from 'redux/hooks';
+import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import {
 	getIsAuthSelector,
 	getUserRoleSelector,
 } from 'redux/store/user/selectors';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useAppDispatch } from 'redux/store';
+
 import {
 	getUserDataAction,
 	setUserSavedProfileAction,
