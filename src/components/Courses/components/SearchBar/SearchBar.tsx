@@ -3,9 +3,9 @@ import { FC, useEffect, useState } from 'react';
 import Input from 'common/Input';
 import Button from 'common/Button';
 
-import { useAppSelector } from 'redux/hooks';
+import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import { getAllCoursesSelector } from 'redux/store/courses/selectors';
-import { useAppDispatch } from 'redux/store';
+
 import { getAllCoursesAction } from 'redux/store/courses/actionCreators';
 import { getAllAuthorsAction } from 'redux/store/authors/actionCreators';
 import { ISearchBarProps } from 'tsTypes';
