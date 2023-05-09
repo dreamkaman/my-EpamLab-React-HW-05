@@ -57,4 +57,14 @@ describe('Tests for coursesReducer', () => {
 	it('Reducer should handle SET_NEW_COURSE and returns new state', () => {
 		expect(resultWithNewState).toEqual(newState);
 	});
+
+	const stateWithoutDeletedItem = coursesReducer(newState, {
+		type: 'CLEAR_DELETED_COURSE',
+		payload: '83e563a1-a9f3-4f56-877f-ae22a66ee8c7', //payload===id
+	});
+	console.log(stateWithoutDeletedItem);
+
+	it('Reducer should handle CLEAR_DELETED_COURSE and returns new state', () => {
+		expect(stateWithoutDeletedItem).toEqual(initialState);
+	});
 });

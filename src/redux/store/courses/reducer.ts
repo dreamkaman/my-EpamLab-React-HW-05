@@ -32,5 +32,3 @@ export const coursesReducer = createReducer(initialReducer, {
 		return [...state, ...action.payload];
 	},
 });
-
-console.log(coursesReducer);
