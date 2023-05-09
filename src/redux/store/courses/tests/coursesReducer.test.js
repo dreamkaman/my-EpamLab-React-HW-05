@@ -1,5 +1,4 @@
 import { coursesReducer } from '../reducer';
-// import { mockedState } from 'utils/test-utils.jsx';
 
 const initialState = [
 	{
