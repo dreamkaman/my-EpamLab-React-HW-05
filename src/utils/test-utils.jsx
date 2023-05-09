@@ -31,7 +31,11 @@ export const mockedState = {
 	authors: [
 		{
 			id: '24699fc6-c7a3-4b53-994f-f30e5c444134',
-			name: 'TestAuthor',
+			name: 'TestAuthor-1',
+		},
+		{
+			id: '24699fc6-c7a3-4b53-994f-f30e5c444135',
+			name: 'TestAuthor-2',
 		},
 	],
 };
