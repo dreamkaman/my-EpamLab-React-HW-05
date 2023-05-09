@@ -21,7 +21,7 @@ const payload = {
 	authors: ['24699fc6-c7a3-4b53-994f-f30e5c444134'],
 };
 
-const newState = [
+const mockedStateWithAddedItem = [
 	{
 		id: '83e563a1-a9f3-4f56-877f-ae22a66ee8c9',
 		title: 'TestingTitle',
@@ -49,16 +49,16 @@ describe('Tests for coursesReducer', () => {
 		expect(result).toEqual(initialState);
 	});
 
-	const resultWithNewState = coursesReducer(initialState, {
+	const stateWithAddedItem = coursesReducer(initialState, {
 		type: 'SET_NEW_COURSE',
 		payload,
 	});
 
 	it('Reducer should handle SET_NEW_COURSE and returns new state', () => {
-		expect(resultWithNewState).toEqual(newState);
+		expect(stateWithAddedItem).toEqual(mockedStateWithAddedItem);
 	});
 
-	const stateWithoutDeletedItem = coursesReducer(newState, {
+	const stateWithoutDeletedItem = coursesReducer(mockedStateWithAddedItem, {
 		type: 'CLEAR_DELETED_COURSE',
 		payload: '83e563a1-a9f3-4f56-877f-ae22a66ee8c7', //payload===id
 	});
