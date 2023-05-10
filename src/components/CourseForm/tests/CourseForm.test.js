@@ -1,5 +1,6 @@
 import { screen, fireEvent } from '@testing-library/react';
 import * as reactReduxHooks from 'redux/hooks.ts';
+import * as reactHooks from 'react';
 import CourseForm from '../CourseForm';
 import { renderWithProvider } from 'utils/test-utils';
 
@@ -14,20 +15,26 @@ describe('Tests for CourseForm', () => {
 
 	it('CourseForm "Create author" click button should call dispatch.', () => {
 		jest.mock('redux/hooks.ts');
+		jest.mock('react');
 
 		const mockedDispatch = jest.spyOn(reactReduxHooks, 'useAppDispatch');
 
 		const dispatch = jest.fn();
+
+		const mockedUseState = jest.spyOn(reactHooks, 'useState');
+
+		mockedUseState.mockReturnValue('TestAuthorName');
+
+		mockedUseState();
+
 		mockedDispatch.mockReturnValue(dispatch);
 
-		renderWithProvider(<CourseForm mode={'create'} />);
+		renderWithProvider(<CourseForm mode='create' />);
 
 		const btnCreateAuthor = screen.getByText('Create author');
 
-		console.log(btnCreateAuthor);
-
 		fireEvent.click(btnCreateAuthor);
 
-		// expect(dispatch).toHaveBeenCalled();
+		expect(dispatch).toHaveBeenCalled();
 	});
 });
