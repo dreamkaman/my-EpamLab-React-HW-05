@@ -10,11 +10,11 @@ import {
 } from 'redux/store/user/selectors';
 
 import s from './Header.module.css';
+import { memo } from 'react';
 
 const Header = () => {
 	const userName = useAppSelector(getUserNameSelector);
 	const isLoggined = useAppSelector(getIsAuthSelector);
-
 	return (
 		<header>
 			<div className={s.wrapper}>
@@ -29,4 +29,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default memo(Header);

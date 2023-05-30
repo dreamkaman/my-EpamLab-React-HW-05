@@ -1,6 +1,6 @@
 import { screen, fireEvent } from '@testing-library/react';
 import * as reactReduxHooks from 'redux/hooks.ts';
-import * as reactHooks from 'react';
+// import * as reactHooks from "react";
 import CourseForm from '../CourseForm';
 import { renderWithProvider } from 'utils/test-utils';
 
