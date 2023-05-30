@@ -15,6 +15,7 @@ import {
 	getUserProfileSelector,
 	getUserRoleSelector,
 } from 'redux/store/user/selectors';
+
 import { getUserDataAction } from 'redux/store/user/actionCreators';
 
 import { ICourse } from 'tsTypes';

@@ -23,6 +23,7 @@ const SearchBar: FC<ISearchBarProps> = ({
 
 	useEffect(() => {
 		dispatch(getAllCoursesAction());
+
 		dispatch(getAllAuthorsAction());
 	}, []);
 
