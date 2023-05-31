@@ -1,4 +1,14 @@
-import { Route, Routes } from 'react-router';
+import { Route, Routes, Navigate, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useAppSelector, useAppDispatch } from 'redux/hooks';
+import {
+	getIsAuthSelector,
+	getUserRoleSelector,
+} from 'redux/store/user/selectors';
+import {
+	getUserDataAction,
+	setUserSavedProfileAction,
+} from 'redux/store/user/actionCreators';
 
 import Header from 'components/Header';
 import Courses from 'components/Courses';
@@ -8,19 +18,6 @@ import Login from 'components/Login';
 import CourseForm from 'components/CourseForm';
 import ProtectedRoute from 'common/ProtectedRoute';
 import PrivateRoute from 'components/PrivateRouter';
-
-import { useAppSelector, useAppDispatch } from 'redux/hooks';
-import {
-	getIsAuthSelector,
-	getUserRoleSelector,
-} from 'redux/store/user/selectors';
-import { Navigate, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-
-import {
-	getUserDataAction,
-	setUserSavedProfileAction,
-} from 'redux/store/user/actionCreators';
 
 const App = () => {
 	const dispatch = useAppDispatch();
